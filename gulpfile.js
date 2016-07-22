@@ -4,5 +4,5 @@ var gulp = require('gulp'),
 
 gulp.task('default', function() {
 	gulp.src('./build/compiled/test.compiled/**/*')
-		.pipe(validator())
+		.pipe(validator({verbose:true}))
 })
