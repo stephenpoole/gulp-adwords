@@ -1,7 +1,7 @@
 {
   "name": "gulp-adwords",
   "version": "0.0.1",
-  "description": "Validates AdWords ad deliveries",
+  "description": "Validates banner ads for upload to the AdWords network.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -14,7 +14,8 @@
     "validation",
     "valid",
     "ad",
-    "advertisement"
+    "advertisement",
+    "banner"
   ],
   "author": "Stephen Poole",
   "license": "MIT",
