@@ -18,7 +18,7 @@ gulp.task('default', function() {
 ```
 
 #Options  
-verbose - Toggles verbose logging.  
-filesize - Sets the max filesize for FILESIZE_CHECK.  
-name - Sets the name displayed in the log. If none is set, uses the title of the html page.  
-environment - Sets the environment for GWD_ENVIRONMENT_CHECK if using Google Web Designer. Valid environments are `adwords`, `doubleclick`, `admob` and `default`.
+verbose - Toggles verbose logging. Defaults to `false`.
+filesize - Sets the max filesize for FILESIZE_CHECK. Defaults to `150`. 
+name - Sets the name displayed in the log. If none is set, uses the title of the html page. Defaults to undefined.
+environment - Sets the environment for GWD_ENVIRONMENT_CHECK if using Google Web Designer. Valid environments are `adwords`, `doubleclick`, `admob` and `default`. Defaults to `adwords`.
