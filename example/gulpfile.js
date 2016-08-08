@@ -4,9 +4,9 @@ var gulp = require('gulp'),
 gulp.task('default', function() {
 	//will pass
 	gulp.src('./banners/passed/**/*')
-		.pipe(adwords({verbose:true, filesize:150, name:'Passing Banner', environment:'adwords'}))
+		.pipe(adwords({verbose:false, filesize:150, name:'Passing Banner', environment:'adwords'}))
 
 	//environment won't match
 	gulp.src('./banners/environment_mismatch/**/*')
-		.pipe(adwords())
+		.pipe(adwords({verbose:false}))
 })
