@@ -8,5 +8,5 @@ gulp.task('default', function() {
 
 	//environment won't match
 	gulp.src('./banners/environment_mismatch/**/*')
-		.pipe(adwords({verbose:true}))
+		.pipe(adwords())
 })
