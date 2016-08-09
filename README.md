@@ -17,11 +17,35 @@ gulp.task('default', function() {
 })
 ```
 
+#Custom Tests  
+  
+You may include custom tests. The test function will be given the html as a string as well as the files found in an array.
+  
+```
+var gulp = require('gulp'),
+	adwords = require('gulp-adwords')
+
+var tests = [
+	{
+		test: function(html, files) {
+			return false  //will fail
+		},
+		message: 'Message to display if the test fails'
+	}
+]
+
+gulp.task('default', function() {
+	gulp.src('./banner/**/*')
+		.pipe(adwords({customTests: tests}))
+})
+```
+
 #Options  
 verbose - Toggles verbose logging. Defaults to `false`.  
 filesize - Sets the max filesize for `FILESIZE_CHECK`. Defaults to `150`.  
 name - Sets the name displayed in the log. If none is set, uses the title of the html page. Defaults to undefined.  
 environment - Sets the environment for `GWD_ENVIRONMENT_CHECK` if using Google Web Designer. Valid environments are `adwords`, `doubleclick`, `admob` and `default`. Defaults to `adwords`.  
+customTests - Add custom tests  
 
 #Licence  
 Copyright (c) 2015 Red Lion Canada
