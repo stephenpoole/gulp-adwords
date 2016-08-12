@@ -6,7 +6,8 @@ var tests = [
 		test: function(html, files) {
 			return false
 		},
-		message: 'YOU LOSE!'
+		message: 'YOU LOSE!',
+		name: 'LOSING_TEST'
 	}
 ]
 
@@ -18,4 +19,8 @@ gulp.task('default', function() {
 	//environment won't match
 	gulp.src('./banners/environment_mismatch/**/*')
 		.pipe(adwords())
+
+	//custom test
+	gulp.src('./banners/passed/**/*')
+		.pipe(adwords({name: 'Custom Test Banner', customTests: tests}))
 })
