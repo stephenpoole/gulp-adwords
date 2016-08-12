@@ -13,9 +13,9 @@ var tests = [
 gulp.task('default', function() {
 	//will pass
 	gulp.src('./banners/passed/**/*')
-		.pipe(adwords({verbose:false, filesize:150, name:'Passing Banner', environment:'adwords',customTests:tests}))
+		.pipe(adwords({filesize:150, name:'Passing Banner', environment:'adwords'}))
 
 	//environment won't match
 	gulp.src('./banners/environment_mismatch/**/*')
-		.pipe(adwords({verbose:false}))
+		.pipe(adwords())
 })

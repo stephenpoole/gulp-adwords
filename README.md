@@ -46,6 +46,7 @@ filesize - Sets the max filesize for `FILESIZE_CHECK`. Defaults to `150`.
 name - Sets the name displayed in the log. If none is set, uses the title of the html page. Defaults to undefined.  
 environment - Sets the environment for `GWD_ENVIRONMENT_CHECK` if using Google Web Designer. Valid environments are `adwords`, `doubleclick`, `admob` and `default`. Defaults to `adwords`.  
 customTests - Add custom tests  
+complete - Function to call on complete. Gets passed an array of errors, if any.
 
 #Licence  
 Copyright (c) 2015 Red Lion Canada
