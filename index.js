@@ -1,1 +1,2 @@
-module.exports = require('./lib/base');
+require('./build/index.js');
+module.exports = PLUGIN__ADWORDS;
